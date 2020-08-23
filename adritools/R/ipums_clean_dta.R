@@ -6,10 +6,8 @@
 #' @param clean_labels Clean labels. Extra step, often not required.
 #' @param mis_lab Vector of character strings to convert labels for missing values to `NA`
 #'
-#' @return Cleaned data frame without labels and
+#' @return Cleaned data frame.
 #' @export
-#'
-#' @examples
 ipums_clean_dta <- function(
   d = NULL, numeric_convert = NULL, string_as_factors = TRUE, clean_labels = FALSE,
   mis_lab = c("unknown", "niu (not in universe)", "not reported/missing",
