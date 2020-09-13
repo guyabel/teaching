@@ -10,7 +10,7 @@ ipums_clean_dta(
   string_as_factors = TRUE,
   clean_labels = FALSE,
   mis_lab = c("unknown", "niu (not in universe)", "not reported/missing",
-    "unknown/missing", "response suppressed", "unclassifiable")
+    "unknown/missing", "response suppressed", "unclassifiable", "niu (not universe)")
 )
 }
 \arguments{
