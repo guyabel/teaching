@@ -19,6 +19,8 @@ ipums_clean_dta <- function(
     {if(clean_labels) dplyr::mutate_if(is.labelled, ipumsr::lbl_clean) else .} %>%
     dplyr::mutate_if(is.labelled, ~ipumsr::lbl_na_if(., ~.lbl %in% mis_lab)) %>%
     dplyr::mutate_at({numeric_convert}, haven::zap_labels) %>%
+    dplyr::mutate_at({numeric_convert}, as.numeric) %>%
     dplyr::mutate_if(is.labelled, haven::as_factor) %>%
-    {if(!string_as_factors) dplyr::mutate_if(., is.factor, as.character) else .}
+    dplyr::mutate_if(is.factor, as.character) %>%
+    {if(string_as_factors) dplyr::mutate_if(., is.character, as.factor) else .}
 }
