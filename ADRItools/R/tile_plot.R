@@ -57,7 +57,7 @@ tile_plot <- function(d = NULL, x = NULL, y = NULL, fill = NULL, facets = NULL,
 
   m <- d %>%
     dplyr::group_by(col) %>%
-    dplyr::summarise(row = n_distinct(country)) %>%
+    dplyr::summarise(row = n_distinct(!!y)) %>%
     dplyr::rowwise() %>%
     dplyr::mutate(row = paste(1:row, collapse = ",")) %>%
     tidyr::separate_rows(row) %>%
