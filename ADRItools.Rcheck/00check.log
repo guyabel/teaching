@@ -1,0 +1,81 @@
+* using log directory 'C:/Users/Guy/Documents/GitHub/teaching/ADRItools.Rcheck'
+* using R version 4.0.3 (2020-10-10)
+* using platform: x86_64-w64-mingw32 (64-bit)
+* using session charset: ISO8859-1
+* using options '--no-manual --as-cran'
+* checking for file 'ADRItools/DESCRIPTION' ... OK
+* checking extension type ... Package
+* this is package 'ADRItools' version '0.1.0'
+* package encoding: UTF-8
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... OK
+* checking for portable file names ... OK
+* checking serialization versions ... OK
+* checking whether package 'ADRItools' can be installed ... OK
+* checking installed package size ... OK
+* checking package directory ... OK
+* checking for future file timestamps ... OK
+* checking DESCRIPTION meta-information ... OK
+* checking top-level files ... OK
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... OK
+* checking R files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking loading without being on the library search path ... OK
+* checking dependencies in R code ... WARNING
+'::' or ':::' imports not declared from:
+  'cowplot' 'dplyr' 'ggforce' 'ggplot2' 'gridExtra' 'gtable' 'haven'
+  'ipumsr' 'stringr' 'tidyr'
+* checking S3 generic/method consistency ... OK
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... NOTE
+ipums_clean_dta: no visible global function definition for '%>%'
+ipums_clean_dta: no visible binding for global variable 'is.labelled'
+ipums_clean_dta: no visible binding for global variable '.'
+tile_plot: no visible global function definition for '%>%'
+tile_plot: no visible global function definition for 'aes_string'
+tile_plot: no visible global function definition for 'element_text'
+tile_plot: no visible global function definition for 'n_distinct'
+tile_plot: no visible binding for global variable '.'
+Undefined global functions or variables:
+  %>% . aes_string element_text is.labelled n_distinct
+* checking Rd files ... NOTE
+prepare_Rd: every_other.Rd:18-20: Dropping empty section \value
+* checking Rd metadata ... OK
+* checking Rd line widths ... OK
+* checking Rd cross-references ... OK
+* checking for missing documentation entries ... OK
+* checking for code/documentation mismatches ... OK
+* checking Rd \usage sections ... OK
+* checking Rd contents ... OK
+* checking for unstated dependencies in examples ... WARNING
+'library' or 'require' call not declared from: 'gapminder'
+* checking examples ... ERROR
+Running examples in 'ADRItools-Ex.R' failed
+The error most likely occurred in:
+
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: tile_plot
+> ### Title: Tile Plot over Multiple Columns
+> ### Aliases: tile_plot
+> 
+> ### ** Examples
+> 
+> library(gapminder)
+Error in library(gapminder) : there is no package called 'gapminder'
+Execution halted
+* checking for non-standard things in the check directory ... OK
+* checking for detritus in the temp directory ... OK
+* DONE
+Status: 1 ERROR, 2 WARNINGs, 2 NOTEs
