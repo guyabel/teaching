@@ -1,0 +1,16 @@
+Package: HKUtools
+Type: Package
+Title: Helper Functions for Statistcal Modelling Courses at University of Hong Kong
+Version: 0.1.0
+Author: Guy J. Abel
+Maintainer: Guy J. Abel <g.j.abel@gmail.com>
+Description: Functions for the statistcal modelling course to help with tidying, visualising and modelling of IPUMS Internatiaonl data. 
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.1
+Imports: 
+    ipumsr,
+    haven,
+    dplyr,
+    magrittr
