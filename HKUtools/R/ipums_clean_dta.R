@@ -10,11 +10,17 @@
 #' @export
 ipums_clean_dta <- function(
   d = NULL, numeric_convert = NULL, string_as_factors = TRUE, clean_labels = FALSE,
-  mis_lab = c("unknown", "niu (not in universe)", "not reported/missing",
-              "unknown/missing", "response suppressed", "unclassifiable",
-              # in cambodia 2013 nativity
-              "niu (not universe)")
-){
+  mis_lab = NULL){
+  mis_lab <- c(
+    mis_lab,
+    "unknown", "niu (not in universe)", "not reported/missing",
+    "unknown/missing", "response suppressed", "unclassifiable",
+    # in cambodia 2013 nativity
+     "niu (not universe)",
+    # dhs
+    "missing", "don't know", "not weighed at birth", "flagged cases", "not present",
+    "refused", "other", "out of plausible range", "inconsistent"
+  )
   d %>%
     {if(clean_labels) dplyr::mutate_if(haven::is.labelled, ipumsr::lbl_clean) else .} %>%
     dplyr::mutate_if(haven::is.labelled, ~ipumsr::lbl_na_if(., ~.lbl %in% mis_lab)) %>%
