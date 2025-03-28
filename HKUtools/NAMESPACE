@@ -2,4 +2,5 @@
 
 export("%>%")
 export(ipums_clean_dta)
+export(tab_model_image)
 importFrom(magrittr,"%>%")

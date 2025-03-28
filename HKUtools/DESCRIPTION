@@ -4,7 +4,7 @@ Title: Helper Functions for Statistcal Modelling Courses at University of Hong K
 Version: 0.1.0
 Author: Guy J. Abel
 Maintainer: Guy J. Abel <g.j.abel@gmail.com>
-Description: Functions for the statistcal modelling course to help with tidying, visualising and modelling of IPUMS Internatiaonl data. 
+Description: Functions for the R courses at HKU. 
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
@@ -13,4 +13,6 @@ Imports:
     ipumsr,
     haven,
     dplyr,
-    magrittr
+    magrittr,
+    sjPlot,
+    webshot
